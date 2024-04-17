@@ -1,4 +1,3 @@
-import pandas as pd
 import csv
 
 path = "./CS132-JJD/csv_restructure/ds.csv"
