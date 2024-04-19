@@ -8,6 +8,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+p {
+  font-weight: normal;
+}
 #loading {
   width: 100vw;
   height: 100vh;
@@ -184,6 +187,15 @@ header table {
   border-bottom: 4px solid rgb(255, 44, 90);
   border-bottom: 4px solid rgb(255, 44, 90);
   width: clamp(80px, 6%, 100px);
+}
+#data-collection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+}
+#data-collection-btn {
+  width: 90%;
 }
 #photos {
   width: 100%;
