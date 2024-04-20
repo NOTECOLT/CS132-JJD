@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>yourname</title>
+    <title>CS 132 JJD Portfolio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
@@ -35,6 +35,14 @@
       class="animated slideInDown"
       style="animation-delay: 1.8s"
     >
+      <!-- <div id="logo">JJD</div>
+      <div id="navigation">
+        <a href="#about">Overview</a>
+        <a href="#data"></a>
+        <a href="#methods">Methods</a>
+        <a href="">Results</a>
+        <a href="#team">Our Team</a>
+      </div> -->
       <table>
         <tr>
           <td id="logo">JJD</td>
@@ -125,57 +133,37 @@
     </div>
     <div id="data">
       <h1>data</h1>
-      <div id="photos">
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1547922657-b370d1687eb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
-        />
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1549375463-8cbc18ca3f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
-        />
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=650&q=80"
-        />
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1549309019-a1d77aeae74f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-        />
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1547149666-769b42053e67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80"
-        />
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1547950515-e652d0f50b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-        />
-        <img
-          onclick="magnify($(this).attr('src'))"
-          src="https://images.unsplash.com/photo-1545342084-d03fe58ea023?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80"
-        />
+      <p>
+        To address the overarching problem and the proposed research questions,
+        our group opted to utilize the dataset entitled “Consumer Price Index
+        for All Income Households by Commodity Group (2018=100): January 2018 -
+        March 2024” dataset found on the OpenStat website, an initiative made by
+        the Philippine Statistics Authority.
+      </p>
+      <p>
+        The dataset as a whole is massive, as it lists the Consumer Price Index
+        (CPI) of various commodities under different commodity groups, wherein
+        the CPI is computed based on the province or region monthly.
+      </p>
+      <p>
+        Given the scope of our study, we performed modifications onto the
+        dataset, and performed preprocessing on the data. The overall procedure
+        is better outlined in the Python Notebook.
+      </p>
+
+      <div id="data-collection-container">
+        <a
+          href="https://colab.research.google.com/drive/1RykWOuEqbO7Y7eV3QAs6Y_88R7HZzwn0?usp=sharing"
+          target="_blank"
+        >
+          <button class="btn_one" id="data-collection-btn">
+            Check out our data collection procedure
+          </button>
+        </a>
       </div>
     </div>
     <div id="methods">
       <h1>methods</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
     </div>
     <div id="team">
       <h1>our team</h1>
@@ -212,12 +200,7 @@
           <img src="" alt="Jeanne" />
           <h3 class="name">Jeanne Toledo</h3>
           <!--PLace your details in the div under your name!-->
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus
-            in hac habitasse platea dictumst vestibulum rhoncus est. At tempor
-            commodo ullamcorper a lacus vestibulum.
-          </div>
+          <div>Hello, I am Jeanne Toledo.</div>
         </div>
       </div>
     </div>
