@@ -1,6 +1,6 @@
 import csv
 
-path = "./CS132-JJD/csv_restructure/ds.csv"
+path = "./csv_restructure/ds.csv"
 entries = [["Geolocation", "Commodity Description", "CPI", "Year", "Month"]]
 idx = 0
 
@@ -21,7 +21,7 @@ with open(path, "r") as file:
 file.close()
 
 '''Write the entries to the new csv file'''
-with open("./CS132-JJD/csv_restructure/dataset.csv", "w") as file:
+with open("./csv_restructure/dataset.csv", "w") as file:
   f = csv.writer(file)
   for row in entries:
     f.writerow(row)
