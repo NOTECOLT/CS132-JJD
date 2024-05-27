@@ -193,13 +193,14 @@ header table {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
 }
-#data-collection-container {
+#data-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: inherit;
 }
-#data-collection-btn {
+#data-collection-btn,
+#EDA-btn {
   width: 90%;
 }
 #photos {

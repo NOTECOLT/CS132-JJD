@@ -179,11 +179,11 @@
       <div id="hypotheses">
         <div id="hypothesis">
           <h3>Null Hypothesis</h3>
-          <p>The CPI of Public transportation has not increased over the past five years.</p>
+          <p>The CPI of public transportation has not increased over the past five years.</p>
         </div>
         <div id="hypothesis">
           <h3>Alternative Hypothesis</h3>
-          <p>The CPI of Public transportation has increased over the past five years.</p>
+          <p>The CPI of public transportation has increased over the past five years.</p>
         </div>
       </div>
 
@@ -282,7 +282,7 @@
       </div>
 
       <p>
-        Checkout our Python notebook to see the procedure in much more detail. Similarly, our
+        Check out our Python notebook to see the procedure in much more detail. Similarly, our
         preprocessed data set can be found
         <a
           href="https://docs.google.com/spreadsheets/d/1d2OQ2QrqZBZARJU6S0SrfwTGs-UZQgvG5_r-ecyHkmE/edit?usp=sharing"
@@ -291,7 +291,7 @@
         >.
       </p>
 
-      <div id="data-collection-container">
+      <div id="data-container">
         <a
           href="https://colab.research.google.com/drive/1RykWOuEqbO7Y7eV3QAs6Y_88R7HZzwn0?usp=drive_link"
           target="_blank"
@@ -376,13 +376,25 @@
             <span class="add-emph">Primary Research Question:</span> What is the overall trend of
             the CPI of public transportation over the past five years? <br />
             <br />
-            <span class="add-emph">Null hypothesis:</span> The CPI of Public transportation has not
+            <span class="add-emph">Null hypothesis:</span> The CPI of public transportation has not
             increased over the past five years.
             <br />
-            <span class="add-emph">Alternative hypothesis:</span> The CPI of Public transportation
+            <span class="add-emph">Alternative hypothesis:</span> The CPI of public transportation
             has increased over the past five years.
           </p>
-          <p></p>
+          <p>
+            The Mann-Whitney U statistical test was then used to check if we will accept or reject
+            the null hypothesis. After performing the statistical test, we obtained a p-value of
+            7.714x10^(-6), which is less than our set significance level of 0.05. Thus, we
+            <span class="add-emph">reject the null hypothesis</span>.
+          </p>
+          <p>
+            Given this, it implies that
+            <span class="add-emph"
+              >the CPI of Passenger transportation has significantly increased over the past five
+              years</span
+            >.
+          </p>
         </div>
         <div class="card-procedure">
           <p>
@@ -395,7 +407,33 @@
             <span class="add-emph">Alternative hypothesis:</span> There is a relationship between
             the CPI of fuel/gas and public transportation over the past five years.
           </p>
+          <p>
+            The Spearman Correlation test was then used to check if we will accept or reject the
+            null hypothesis. After performing the statistical test, we obtained the Spearman
+            Coefficient rho of (a value), which is less than our set significance level of 0.05.
+            Thus, we <span class="add-emph">reject the null hypothesis</span>.
+          </p>
+          <p>
+            Given this, it implies that
+            <span class="add-emph"
+              >there is an observed correlation between the CPI of fuel and public transportation
+              over the past 5 years from 2019 to 2023</span
+            >.
+          </p>
         </div>
+      </div>
+
+      <p>
+        You may look into our Python notebook to see our exploratory data analysis in much more
+        detail.
+      </p>
+      <div id="data-container">
+        <a
+          href="https://colab.research.google.com/drive/1LnbBjl69wKKgpV9iUBpogIUWlqBACwjk?usp=sharing"
+          target="_blank"
+        >
+          <button class="btn_one" id="EDA-btn">Check out our exploratory data analysis</button>
+        </a>
       </div>
     </div>
     <div id="methods">
