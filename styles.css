@@ -279,7 +279,7 @@ p {
   border-bottom: 4px solid rgb(255, 44, 90);
 }
 
-#card-container {
+.card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-auto-flow: row;
@@ -298,6 +298,27 @@ p {
 
 h3.name:hover {
   border-bottom: 2px solid rgb(255, 44, 90);
+}
+
+.procedure-header {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.procedure-header:hover {
+  border-bottom: 2px solid rgb(255, 44, 90);
+}
+
+.procedure {
+  border: 2px solid rgb(255, 44, 90);
+  border-radius: 20px;
+  padding-bottom: 34px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.card-content {
+  font-weight: normal;
 }
 
 #team table {
