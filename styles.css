@@ -321,6 +321,15 @@ h3.name:hover {
   font-weight: normal;
 }
 
+.plots {
+  width: 100%;
+}
+
+.plots:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 #team table {
   width: 100%;
 }

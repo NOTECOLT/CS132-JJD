@@ -240,7 +240,6 @@
       </p>
 
       <h3>About the data set</h3>
-
       <p>
         After performing preprocessing and reformatting, our data set now contains a total of 44850
         entries. Moreover, the data set now has five columns instead of just two, which was found in
@@ -262,7 +261,7 @@
       </p>
       <div class="card-container">
         <div class="card procedure">
-          <h3 class="procedure-header">Step 0: Preparation of the Data set</h3>
+          <h4 class="procedure-header">Step 0: Preparation of the Data set</h4>
           <div class="card-content">
             At this step, we first extracted the relevant data from the original data set. After
             doing so, we manually removed excess rows and filled in the missing Geolocation and Year
@@ -271,7 +270,7 @@
           </div>
         </div>
         <div class="card procedure">
-          <h3 class="procedure-header">Step 1: Preprocessing</h3>
+          <h4 class="procedure-header">Step 1: Preprocessing</h4>
           <div class="card-content">
             After preparing our data set, we now perform preprocessing to ensure that the data is
             clean and consistent. As we performed this step, we found that only the CPI column has
@@ -304,7 +303,44 @@
         </a>
       </div>
 
-      <h2>Exploratory Data Analysis</h2>
+      <h2>Exploratory Data Analysis (EDA)</h2>
+      <p>
+        Now that our data set is cleaned and well-formatted, we can now proceed to exploratory data
+        analysis. Essentially, this step involves creating (clear) visualizations to help us
+        understand the data, and using this information to determine if our established hypotheses
+        are correct. Following this, we will perform hypothesis testing to see what results we can
+        derive from the data.
+      </p>
+      <h3>Data Visualization</h3>
+      <p>
+        For this study, we conceptualized three different plots that aim to help us answer our
+        Research Questions, and understand our project in a visual manner.
+      </p>
+      <div class="card-container">
+        <div class="card procedure">
+          <h4 class="procedure-header">Plot 1</h4>
+          <div class="card-content">
+            <img
+              class="plots"
+              onclick="magnify($(this).attr('src'))"
+              src="img/graph1.png"
+              alt="Plot 1"
+            />
+          </div>
+        </div>
+
+        <div class="card procedure">
+          <h4 class="procedure-header">Plot 2</h4>
+          <div class="card-content">
+            <img
+              class="plots"
+              onclick="magnify($(this).attr('src'))"
+              src="img/graph2.png"
+              alt="Plot 1"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div id="methods">
       <h1>Methods</h1>
