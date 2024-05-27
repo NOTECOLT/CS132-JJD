@@ -88,7 +88,7 @@
       </tr>
     </table>
     <div id="overview">
-      <h1>overview</h1>
+      <h1>Overview</h1>
       <h2 id="background">Background of the Study</h2>
       <p>
         Currently, 80% of Filipinos living in urban areas rely on public transportation. In Metro
@@ -211,14 +211,22 @@
       </div>
     </div>
     <div id="data">
-      <h1>data</h1>
+      <h1>Data</h1>
 
       <h2>Data Collection</h2>
       <p>
         To address the overarching problem and the proposed research questions, our group opted to
-        utilize the data set entitled “Consumer Price Index for All Income Households by Commodity
-        Group (2018=100): January 2018 - March 2024” data set found on the OpenStat website, an
-        initiative made by the Philippine Statistics Authority.
+        utilize the data set entitled
+        <a
+          href="https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2M__PI__CPI__2018/0012M4ACP09.px/?rxid=3d158327-2848-4f4e-98a5-daeb59818b9e"
+          target="_blank"
+          >“Consumer Price Index for All Income Households by Commodity Group (2018=100): January
+          2018 - March 2024”</a
+        >
+        data set found on the
+        <a href="https://openstat.psa.gov.ph/" target="_blank">OpenStat website</a> , an initiative
+        made by the
+        <a href="https://psa.gov.ph/" target="_blank">Philippine Statistics Authority</a>.
       </p>
       <p>
         The data set as a whole is massive, as it lists the Consumer Price Index (CPI) of various
@@ -226,13 +234,43 @@
         province or region monthly.
       </p>
       <p>
-        Given the scope of our study, we performed modifications onto the data set, and performed
-        preprocessing on the data. The overall procedure is better outlined in the Python Notebook.
+        Given the scope of our study, we will perform modifications onto the data set, which
+        includes reformatting it as a whole followed by preprocessing. Details about our data set
+        will be presented below.
+      </p>
+
+      <h3>About the data set</h3>
+
+      <p>
+        After performing preprocessing and reformatting, our data set now contains a total of 44850
+        entries. Moreover, the data set now has five columns instead of just two, which was found in
+        the raw data set. From left to right, these columns are:
+      </p>
+      <ol>
+        <li>Geolocation</li>
+        <li>Commodity Description</li>
+        <li>CPI</li>
+        <li>Year</li>
+        <li>Month</li>
+      </ol>
+      <p>
+        In this case, the years we consider are the years 2019 to 2023, since we specifically wanted
+        to know the transportation situation in the past five years. It is worth noting that the
+        year 2024 was not considered as data for this year is still incomplete. The months we
+        consider are January to December with an additional average value. This aside, since every
+        entry represents a totally different CPI value, no sampling method will be used here. Our
+        complete data collection procedure is outlined in our Python Notebook, which is linked
+        below. Similarly, our preprocessed data set can be found
+        <a
+          href="https://docs.google.com/spreadsheets/d/1d2OQ2QrqZBZARJU6S0SrfwTGs-UZQgvG5_r-ecyHkmE/edit?usp=sharing"
+          target="_blank"
+          >here</a
+        >.
       </p>
 
       <div id="data-collection-container">
         <a
-          href="https://docs.google.com/document/d/1hAH2bOOq1qxT_XGlZH0xtG8mNfZgqY5oIUVrEEqbaHc/edit?usp=sharing"
+          href="https://colab.research.google.com/drive/1RykWOuEqbO7Y7eV3QAs6Y_88R7HZzwn0?usp=drive_link"
           target="_blank"
         >
           <button class="btn_one" id="data-collection-btn">
@@ -240,22 +278,14 @@
           </button>
         </a>
       </div>
-      <p>
-        On the other hand, our preprocessed data set can be accessed
-        <a
-          href="https://docs.google.com/spreadsheets/d/1d2OQ2QrqZBZARJU6S0SrfwTGs-UZQgvG5_r-ecyHkmE/edit?usp=sharing"
-          target="_blank"
-          >here</a
-        >
-      </p>
 
       <h2>Exploratory Data Analysis</h2>
     </div>
     <div id="methods">
-      <h1>methods</h1>
+      <h1>Methods</h1>
     </div>
     <div id="team">
-      <h1>our team</h1>
+      <h1>Our team</h1>
       <h4>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Tellus in hac habitasse platea dictumst vestibulum rhoncus
