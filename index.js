@@ -15,25 +15,27 @@ window.onscroll = function () {
       document.documentElement.scrollTop > 80
     ) {
       $("#header").css("background", "#fff");
+      $("#header").css("opacity", "1");
       $("#header").css("color", "#000");
       $("#header").css("box-shadow", "0px 0px 20px rgba(0,0,0,0.09)");
       $("#header").css("padding", "4vh 4vw");
       $("#navigation a").hover(
         function () {
-          $(this).css("border-bottom", "2px solid rgb(255, 44, 90)");
+          $(this).css("border-bottom", "2px solid #f27a62");
         },
         function () {
           $(this).css("border-bottom", "2px solid transparent");
         }
       );
     } else {
-      $("#header").css("background", "transparent");
-      $("#header").css("color", "#fff");
+      $("#header").css("background-color", "white");
+      $("#header").css("opacity", "0.8");
+      $("#header").css("color", "black");
       $("#header").css("box-shadow", "0px 0px 0px rgba(0,0,0,0)");
-      $("#header").css("padding", "6vh 4vw");
+      $("#header").css("padding", "4vh 4vw");
       $("#navigation a").hover(
         function () {
-          $(this).css("border-bottom", "2px solid #fff");
+          $(this).css("border-bottom", "2px solid #f27a62");
         },
         function () {
           $(this).css("border-bottom", "2px solid transparent");

@@ -30,7 +30,11 @@
       <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
       <div id="img_here"></div>
     </div>
-    <header id="header" class="animated slideInDown" style="animation-delay: 1.8s">
+    <header
+      id="header"
+      class="animated slideInDown"
+      style="animation-delay: 1.8s"
+    >
       <!-- <div id="logo">JJD</div>
       <div id="navigation">
         <a href="#about">Overview</a>
@@ -55,16 +59,20 @@
     <table id="top_part">
       <tr>
         <td id="about" class="animated slideInLeft" style="animation-delay: 2s">
-          <h1>Rolling Costs: Exploring CPI trends in Public Transportation and Fuel</h1>
-          <button class="btn_one">
-            <a
-              style="color: inherit; text-decoration: none"
-              href="https://github.com/NOTECOLT/CS132-JJD"
-              target="_blank"
-              >GitHub</a
-            >
-          </button>
-          <table>
+          <h1>ROLLING COSTS:</h1>
+          <h2>Exploring CPI trends in Public Transportation and Fuel</h2>
+          <div id="git-button">
+            <button class="btn_one">
+              <a
+                style="color: inherit; text-decoration: none"
+                href="https://github.com/NOTECOLT/CS132-JJD"
+                target="_blank"
+                >GitHub</a
+              >
+            </button>
+          </div>
+          <div id="road"></div>
+          <!--<table>
             <tr>
               <td class="animated zoomIn" style="animation-delay: 2.2s">
                 <a class="social"><i class="fab fa-github"></i></a>
@@ -82,360 +90,486 @@
                 <a class="social"><i class="fab fa-medium"></i></a>
               </td>
             </tr>
-          </table>
+          </table>-->
         </td>
-        <td id="rightImage" class="animated jackInTheBox" style="animation-delay: 2.2s"></td>
+        <td
+          id="rightImage"
+          class="animated jackInTheBox"
+          style="animation-delay: 2.2s"
+        ></td>
       </tr>
     </table>
     <div id="overview">
       <h1>Overview</h1>
-      <h2 id="background">Background of the Study</h2>
-      <p>
-        Currently, 80% of Filipinos living in urban areas rely on public transportation. In Metro
-        Manila alone, 70% of people are dependent on public transportation to get from place to
-        place. Every day, the number of commuters who ride jeepneys and buses are 8,959,000 and
-        1,865,000, respectively.
-      </p>
-      <p>
-        While there may be other factors as to why Filipinos choose to commute, the main benefit of
-        public transportation is how much more affordable it is compared to the cost of owning a
-        private vehicle and constantly spending money on fuel, maintenance, and parking fees.
-        According to a 2018 Consumer Finance Survey, the monthly expenditure level in Metro Manila
-        was at P27,507/month. Of this, 10.5% was spent on transportation. Most Filipino commuters
-        are from low to middle income classes. The minimum wage in the Philippines varies per
-        province with Metro Manila having the highest amount at P610/day or around P18,300/month;
-        thus, it is difficult for many to allocate such a large budget for transportation.
-      </p>
-      <p>
-        After Russia’s invasion of Ukraine, the price of gas and fuel surged worldwide. The
-        Department of Energy released data that showing that 77.4% of its gas, 80% of its diesel and
-        84% of its kerosene are imported by the Philippines. As a result, the global increase in gas
-        prices have led to the significant increase of local gas prices, which has also largely
-        added to the financial burden of Filipinos.
-      </p>
-      <p>
-        References:
-        <a
-          href="https://cids.up.edu.ph/wp-content/uploads/2023/03/Putting-Transport-Workers-and-Commuters-First-The-Route-to-Just-Transition-in-Public-Transport-Modernization.pdf"
-          target="_blank"
-          >[1]</a
-        >
-        <a
-          href="https://newsinfo.inquirer.net/1507740/sensible-public-transport-a-post-pandemic-dream"
-          target="_blank"
-          >[2]</a
-        >
-        <a
-          href="https://www.vistaresidences.com.ph/blog/commuting-vs-driving-which-is-more-convenient-today"
-          target="_blank"
-          >[3]</a
-        >
-        <a
-          href="https://www.philstar.com/business/2021/11/01/2138052/pinoys-spend-more-they-earn"
-          target="_blank"
-          >[4]</a
-        >
-        <a
-          href="https://ncts.upd.edu.ph/tssp/wp-content/uploads/2021/12/12-TSSP2021-Relationship-of-Income-and-Number-of-Transfers-to-Mode-Choice-in-Metro-Manila.pdf"
-          target="_blank"
-          >[5]</a
-        >
-        <a href="https://tradingeconomics.com/philippines/minimum-wages" target="_blank">[6]</a>
-        <a
-          href="https://newsinfo.inquirer.net/1562204/putins-war-on-ukraine-and-impact-on-ph-prices"
-          target="_blank"
-          >[7]</a
-        >
-        <a
-          href="https://newsinfo.inquirer.net/1607805/drivers-riders-share-brunt-of-fuel-price-surge"
-          target="_blank"
-          >[8]</a
-        >
-      </p>
-      <h2 id="problem">Problem</h2>
-      <p>
-        Many Filipinos are reliant on public transportation as a means to travel to different
-        destinations. Because of this, they are heavily affected by changes in its prices.
-      </p>
-      <h2 id="solution">Solution</h2>
-      <p>
-        Through data science, the group aims to draw insights regarding the state of public
-        transportation prices in the Philippines and its implications to Filipino commuters.
-      </p>
-
-      <h2 id="objectives">Objectives</h2>
-      <ul>
-        <li>
-          To analyze the CPI of public transportation in the Philippines over the past five years
-        </li>
-        <li>
-          To determine the relationship between the CPI of fuel/gas and public transportation over
-          the past five years.
-        </li>
-      </ul>
-
-      <h2 id="question1">Primary Research Question</h2>
-      <p>What is the overall trend of the CPI of public transportation over the past five years?</p>
-      <div id="hypotheses">
-        <div id="hypothesis">
-          <h3>Null Hypothesis</h3>
-          <p>The CPI of public transportation has not increased over the past five years.</p>
+      <div id="background-overview">
+        <div id="bg-content">
+          <h2 id="background">Background of the Study</h2>
+          <p>
+            Currently, 80% of Filipinos living in urban areas rely on public
+            transportation. In Metro Manila alone, 70% of people are dependent
+            on public transportation to get from place to place. Every day, the
+            number of commuters who ride jeepneys and buses are 8,959,000 and
+            1,865,000, respectively.
+            <br /><br />
+            While there may be other factors as to why Filipinos choose to
+            commute, the main benefit of public transportation is how much more
+            affordable it is compared to the cost of owning a private vehicle
+            and constantly spending money on fuel, maintenance, and parking
+            fees. According to a 2018 Consumer Finance Survey, the monthly
+            expenditure level in Metro Manila was at P27,507/month. Of this,
+            10.5% was spent on transportation. Most Filipino commuters are from
+            low to middle income classes. The minimum wage in the Philippines
+            varies per province with Metro Manila having the highest amount at
+            P610/day or around P18,300/month; thus, it is difficult for many to
+            allocate such a large budget for transportation.
+            <br /><br />
+            After Russia’s invasion of Ukraine, the price of gas and fuel surged
+            worldwide. The Department of Energy released data that showing that
+            77.4% of its gas, 80% of its diesel and 84% of its kerosene are
+            imported by the Philippines. As a result, the global increase in gas
+            prices have led to the significant increase of local gas prices,
+            which has also largely added to the financial burden of Filipinos.
+          </p>
+          <p id="ref">
+            References:
+            <a
+              href="https://cids.up.edu.ph/wp-content/uploads/2023/03/Putting-Transport-Workers-and-Commuters-First-The-Route-to-Just-Transition-in-Public-Transport-Modernization.pdf"
+              target="_blank"
+              >[1]</a
+            >
+            <a
+              href="https://newsinfo.inquirer.net/1507740/sensible-public-transport-a-post-pandemic-dream"
+              target="_blank"
+              >[2]</a
+            >
+            <a
+              href="https://www.vistaresidences.com.ph/blog/commuting-vs-driving-which-is-more-convenient-today"
+              target="_blank"
+              >[3]</a
+            >
+            <a
+              href="https://www.philstar.com/business/2021/11/01/2138052/pinoys-spend-more-they-earn"
+              target="_blank"
+              >[4]</a
+            >
+            <a
+              href="https://ncts.upd.edu.ph/tssp/wp-content/uploads/2021/12/12-TSSP2021-Relationship-of-Income-and-Number-of-Transfers-to-Mode-Choice-in-Metro-Manila.pdf"
+              target="_blank"
+              >[5]</a
+            >
+            <a
+              href="https://tradingeconomics.com/philippines/minimum-wages"
+              target="_blank"
+              >[6]</a
+            >
+            <a
+              href="https://newsinfo.inquirer.net/1562204/putins-war-on-ukraine-and-impact-on-ph-prices"
+              target="_blank"
+              >[7]</a
+            >
+            <a
+              href="https://newsinfo.inquirer.net/1607805/drivers-riders-share-brunt-of-fuel-price-surge"
+              target="_blank"
+              >[8]</a
+            >
+          </p>
         </div>
-        <div id="hypothesis">
-          <h3>Alternative Hypothesis</h3>
-          <p>The CPI of public transportation has increased over the past five years.</p>
+      </div>
+      <br /><br />
+      <div class="flex-container" id="pso">
+        <div id="problem-objectives">
+          <div id="problem-container">
+            <h2 id="problem">Problem</h2>
+            <p>
+              Many Filipinos are reliant on public transportation as a means to
+              travel to different destinations. Because of this, they are
+              heavily affected by changes in its prices.
+            </p>
+          </div>
+          <div id="objectives-container">
+            <h2 id="objectives">Objectives</h2>
+            <ul>
+              <li>
+                To analyze the CPI of public transportation in the Philippines
+                over the past five years
+              </li>
+              <li>
+                To determine the relationship between the CPI of fuel/gas and
+                public transportation over the past five years.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="solution-container">
+          <h2 id="solution">Solution</h2>
+          <p>
+            Through data science, the group aims to draw insights regarding the
+            state of public transportation prices in the Philippines and its
+            implications to Filipino commuters.
+          </p>
         </div>
       </div>
 
-      <h2 id="question2">Secondary Research Question</h2>
-      <p>
-        Is there a relationship between the CPI of fuel/gas and public transportation over the past
-        five years?
-      </p>
-      <div id="hypotheses">
-        <div id="hypothesis">
-          <h3>Null Hypothesis</h3>
-          <p>
-            There is no relationship between the CPI of fuel/gas and public transportation over the
-            past five years.
-          </p>
+      <div class="flex-container" id="rq">
+        <p>Primary Research Question</p>
+        <p id="question">
+          What is the
+          <span>overall trend of the CPI of public transportation</span> over
+          the past five years?
+        </p>
+        <div id="hypotheses">
+          <div id="hypothesis">
+            <h3>Null Hypothesis</h3>
+            <p>
+              The CPI of public transportation has not increased over the past
+              five years.
+            </p>
+          </div>
+          <div id="hypothesis">
+            <h3>Alternative Hypothesis</h3>
+            <p>
+              The CPI of public transportation has increased over the past five
+              years.
+            </p>
+          </div>
         </div>
-        <div id="hypothesis">
-          <h3>Alternative Hypotheses</h3>
-          <p>
-            There is a relationship between the CPI of fuel/gas and public transportation over the
-            past five years
-          </p>
+      </div>
+
+      <div class="flex-container" id="rq">
+        <p>Secondary Research Question</p>
+        <p id="question">
+          Is there a
+          <span
+            >relationship between the CPI of fuel/gas and public
+            transportation</span
+          >
+          over the past five years?
+        </p>
+        <div id="hypotheses">
+          <div id="hypothesis">
+            <h3>Null Hypothesis</h3>
+            <p>
+              There is no relationship between the CPI of fuel/gas and public
+              transportation over the past five years.
+            </p>
+          </div>
+          <div id="hypothesis">
+            <h3>Alternative Hypothesis</h3>
+            <p>
+              There is a relationship between the CPI of fuel/gas and public
+              transportation over the past five years.
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div id="data">
       <h1>Data</h1>
 
-      <h2>Data Collection</h2>
-      <p>
-        To address the overarching problem and the proposed research questions, our group opted to
-        utilize the data set entitled
-        <a
-          href="https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2M__PI__CPI__2018/0012M4ACP09.px/?rxid=3d158327-2848-4f4e-98a5-daeb59818b9e"
-          target="_blank"
-          >“Consumer Price Index for All Income Households by Commodity Group (2018=100): January
-          2018 - March 2024”</a
-        >
-        data set found on the
-        <a href="https://openstat.psa.gov.ph/" target="_blank">OpenStat website</a>
-        , an initiative made by the
-        <a href="https://psa.gov.ph/" target="_blank">Philippine Statistics Authority</a>.
-      </p>
-      <p>
-        The data set as a whole is massive, as it lists the Consumer Price Index (CPI) of various
-        commodities under different commodity groups, wherein the CPI is computed based on the
-        province or region monthly.
-      </p>
-      <p>
-        Given the scope of our study, we will perform modifications onto the data set, which
-        includes reformatting it as a whole followed by preprocessing. Details about our data set
-        will be presented below.
-      </p>
-
-      <h3>About the data set</h3>
-      <p>
-        After performing preprocessing and reformatting, our data set now contains a total of 44850
-        entries. Moreover, the data set now has five columns instead of just two, which was found in
-        the raw data set. From left to right, these columns are:
-      </p>
-      <ol>
-        <li>Geolocation</li>
-        <li>Commodity Description</li>
-        <li>CPI</li>
-        <li>Year</li>
-        <li>Month</li>
-      </ol>
-      <p>
-        In this case, the years we consider are the years 2019 to 2023, since we specifically wanted
-        to know the transportation situation in the past five years. It is worth noting that the
-        year 2024 was not considered as data for this year is still incomplete. The months we
-        consider are January to December with an additional average value. This aside, since every
-        entry represents a totally different CPI value, no sampling method will be used here.
-      </p>
-      <div class="card-container">
+      <div id="background-data">
+        <div class="flex-container" id="data-collection">
+          <h2>Data Collection</h2>
+          <p>
+            To address the overarching problem and the proposed research
+            questions, our group opted to utilize the data set entitled
+            <a
+              href="https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2M__PI__CPI__2018/0012M4ACP09.px/?rxid=3d158327-2848-4f4e-98a5-daeb59818b9e"
+              target="_blank"
+              >“Consumer Price Index for All Income Households by Commodity
+              Group (2018=100): January 2018 - March 2024”</a
+            >
+            data set found on the
+            <a href="https://openstat.psa.gov.ph/" target="_blank"
+              >OpenStat website</a
+            >
+            , an initiative made by the
+            <a href="https://psa.gov.ph/" target="_blank"
+              >Philippine Statistics Authority</a
+            >.
+          </p>
+          <p>
+            The data set as a whole is massive, as it lists the Consumer Price
+            Index (CPI) of various commodities under different commodity groups,
+            wherein the CPI is computed based on the province or region monthly.
+          </p>
+          <p>
+            Given the scope of our study, we will perform modifications onto the
+            data set, which includes reformatting it as a whole followed by
+            preprocessing. Details about our data set will be presented below.
+          </p>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div id="steps">
+        <div id="step-title">
+          Step 0&nbsp;&nbsp;:&nbsp;&nbsp;Preparation of the Data Set
+        </div>
+        <div id="step-description">
+          At this step, we first extracted the relevant data from the original
+          data set. After doing so, we manually removed excess rows and filled
+          in the missing Geolocation and Year entries. We then restructured the
+          data set into a different format to make data access easier.
+        </div>
+        <br />
+        <div id="step-title">Step 1&nbsp;&nbsp;:&nbsp;&nbsp;Preprocessing</div>
+        <div id="step-description">
+          After preparing our data set, we now perform preprocessing to ensure
+          that the data is clean and consistent. As we performed this step, we
+          found that only the CPI column has null values and performed some
+          steps to ensure that such is addressed. Entries with null CPI may
+          either be dropped or replaced by an aggregate value depending how many
+          entries of the same Geolocation are also null. In the end, all the CPI
+          values are converted into floats as they are initially in string
+          format.
+        </div>
+      </div>
+      <div class="flex-container" id="about-data">
+        <h3>About the data set</h3>
+        <p>
+          After performing preprocessing and reformatting, our data set now
+          contains a total of <span>44850 entries</span>. Moreover, the data set
+          now has <span>five columns</span> instead of just two, which was found
+          in the raw data set. From left to right, these columns are:
+        </p>
+        <div id="columns">
+          <div id="column">Geolocation</div>
+          <div id="column">Commodity Description</div>
+          <div id="column">CPI</div>
+          <div id="column">Year</div>
+          <div id="column">Month</div>
+        </div>
+        <p>
+          In this case, the years we consider are the years
+          <span>2019 to 2023</span>, since we specifically wanted to know the
+          transportation situation in the past five years. It is worth noting
+          that the year 2024 was not considered as data for this year is still
+          incomplete. The months we consider are
+          <span>January to December</span> with an additional average value.
+          This aside, since every entry represents a totally different CPI
+          value, no sampling method will be used here.
+        </p>
+      </div>
+      <!--<div class="card-container">
         <div class="card procedure">
           <h4 class="procedure-header">Step 0: Preparation of the Data set</h4>
           <div class="card-content">
-            At this step, we first extracted the relevant data from the original data set. After
-            doing so, we manually removed excess rows and filled in the missing Geolocation and Year
-            entries. We then restructured the data set into a different format to make data access
-            easier.
+            At this step, we first extracted the relevant data from the original
+            data set. After doing so, we manually removed excess rows and filled
+            in the missing Geolocation and Year entries. We then restructured
+            the data set into a different format to make data access easier.
           </div>
         </div>
         <div class="card procedure">
           <h4 class="procedure-header">Step 1: Preprocessing</h4>
           <div class="card-content">
-            After preparing our data set, we now perform preprocessing to ensure that the data is
-            clean and consistent. As we performed this step, we found that only the CPI column has
-            null values and performed some steps to ensure that such is addressed. Entries with null
-            CPI may either be dropped or replaced by an aggregate value depending how many entries
-            of the same Geolocation are also null. In the end, all the CPI values are converted into
-            floats as they are initially in string format.
+            After preparing our data set, we now perform preprocessing to ensure
+            that the data is clean and consistent. As we performed this step, we
+            found that only the CPI column has null values and performed some
+            steps to ensure that such is addressed. Entries with null CPI may
+            either be dropped or replaced by an aggregate value depending how
+            many entries of the same Geolocation are also null. In the end, all
+            the CPI values are converted into floats as they are initially in
+            string format.
           </div>
         </div>
-      </div>
+      </div>-->
 
-      <p>
-        Check out our Python notebook to see the procedure in much more detail. Similarly, our
-        preprocessed data set can be found
+      <!--<p>
+        Check out our Python notebook to see the procedure in much more detail.
+        Similarly, our preprocessed data set can be found
         <a
           href="https://docs.google.com/spreadsheets/d/1d2OQ2QrqZBZARJU6S0SrfwTGs-UZQgvG5_r-ecyHkmE/edit?usp=sharing"
           target="_blank"
           >here</a
         >.
-      </p>
+      </p>-->
+      <div class="flex-container" id="data-btns">
+        <div id="data-container">
+          <a
+            href="https://colab.research.google.com/drive/1RykWOuEqbO7Y7eV3QAs6Y_88R7HZzwn0?usp=drive_link"
+            target="_blank"
+          >
+            <button class="btn_one" id="data-collection-btn">
+              Check out our data collection procedure
+            </button>
+          </a>
+        </div>
 
-      <div id="data-container">
-        <a
-          href="https://colab.research.google.com/drive/1RykWOuEqbO7Y7eV3QAs6Y_88R7HZzwn0?usp=drive_link"
-          target="_blank"
-        >
-          <button class="btn_one" id="data-collection-btn">
-            Check out our data collection procedure
-          </button>
-        </a>
+        <div id="data-container">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1d2OQ2QrqZBZARJU6S0SrfwTGs-UZQgvG5_r-ecyHkmE/edit?usp=sharing"
+            target="_blank"
+          >
+            <button class="btn_one" id="dataset-btn">
+              Check out our data set
+            </button>
+          </a>
+        </div>
       </div>
 
-      <h2>Exploratory Data Analysis (EDA)</h2>
-      <p>
-        Now that our data set is cleaned and well-formatted, we can now proceed to exploratory data
-        analysis. Essentially, this step involves creating (clear) visualizations to help us
-        understand the data, and using this information to determine if our established hypotheses
-        are correct. Following this, we will perform hypothesis testing to see what results we can
-        derive from the data.
-      </p>
-      <h3>Data Visualization</h3>
-      <p>
-        For this study, we conceptualized three different plots that aim to help us answer our
-        Research Questions, and understand our project in a visual manner.
-      </p>
-      <div class="card-container">
-        <div class="card procedure">
+      <div class="flex-container" id="eda">
+        <h2>Exploratory Data Analysis (EDA)</h2>
+        <p>
+          Now that our data set is cleaned and well-formatted, we can now
+          proceed to exploratory data analysis. Essentially, this step involves
+          creating (clear) visualizations to help us understand the data, and
+          using this information to determine if our established hypotheses are
+          correct. Following this, we will perform hypothesis testing to see
+          what results we can derive from the data.
+        </p>
+      </div>
+      <div class="flex-container" id="data-visualization">
+        <h3>Data Visualization</h3>
+        <p>
+          For this study, we conceptualized two different plots that aim to help
+          us answer our Research Questions, and understand our project in a
+          visual manner.
+        </p>
+      </div>
+
+      <br />
+      <div id="visualization-plots">
+        <div>
           <h4 class="procedure-header">Plot 1</h4>
-          <div class="card-content">
-            <img
-              class="plots"
-              onclick="magnify($(this).attr('src'))"
-              src="plots/graph1.png"
-              alt="Plot 1"
-            />
-            <p>
-              <span class="add-emph">Primary Research Question:</span> What is the overall trend of
-              the CPI of public transportation over the past five years?
-            </p>
-            <p></p>
-            <p>
-              From our visualization, we can see that the CPI of all transportation groups seem to
-              be going upward over the years. Generally, the CPI for all transportation groups seem
-              to be continuously increasing until it plateaus on some maximum and will eventually
-              increase again after some amount of time.
-            </p>
-          </div>
-        </div>
 
-        <div class="card procedure">
+          <img
+            class="plots"
+            onclick="magnify($(this).attr('src'))"
+            src="plots/graph1.png"
+            alt="Plot 1"
+          />
+        </div>
+        <div>
+          <p id="rq-plot">
+            What is the overall trend of the CPI of public transportation over
+            the past five years?
+          </p>
+          <p id="plot-description">
+            From our visualization, we can see that the CPI of all
+            transportation groups seem to be going upward over the years.
+            Generally, the CPI for all transportation groups seem to be
+            continuously increasing until it plateaus on some maximum and will
+            eventually increase again after some amount of time.
+          </p>
+        </div>
+      </div>
+      <br /><br />
+      <div id="visualization-plots">
+        <div>
           <h4 class="procedure-header">Plot 2</h4>
-          <div class="card-content">
-            <img
-              class="plots"
-              onclick="magnify($(this).attr('src'))"
-              src="plots/graph2.png"
-              alt="Plot 2"
-            />
-            <p>
-              <span class="add-emph">Secondary Research Question:</span> Is there a relationship
-              between the CPI of fuel/gas and public transportation over the past five years?
-            </p>
-            <p>
-              From here, we can see that the CPI for both fuel and land transportation seem to be
-              going upwards, albeit at different rates. This suggests that they may be correlated to
-              one another. Nevertheless, it is worth noting that the CPI for fuel fluctuates,
-              whereas the CPI for land transportation is relatively more stable.
-            </p>
+
+          <img
+            class="plots"
+            onclick="magnify($(this).attr('src'))"
+            src="plots/graph2.png"
+            alt="Plot 2"
+          />
+        </div>
+        <div>
+          <p id="rq-plot">
+            Is there a relationship between the CPI of fuel/gas and public
+            transportation over the past five years?
+          </p>
+          <p id="plot-description">
+            From here, we can see that the CPI for both fuel and land
+            transportation seem to be going upwards, albeit at different rates.
+            This suggests that they may be correlated to one another.
+            Nevertheless, it is worth noting that the CPI for fuel fluctuates,
+            whereas the CPI for land transportation is relatively more stable.
+          </p>
+        </div>
+      </div>
+      <div class="flex-container" id="data-visualization">
+        <h3>Hypothesis Testing</h3>
+        <p>
+          For both research questions, the QQ-plot test showed that our data
+          does not follow a normal distribution. Thus, we use different tests in
+          hypothesis testing.
+        </p>
+      </div>
+
+      <div id="hypothesis-testing">
+        <div>
+          <p id="rq-ht">
+            What is the overall trend of the CPI of public transportation over
+            the past five years?
+          </p>
+          <div id="hypothesis">
+            <span>Null hypothesis:</span>&nbsp;&nbsp;The CPI of public
+            transportation has not increased over the past five years.
+          </div>
+          <div id="hypothesis">
+            <span>Alternative hypothesis:</span>&nbsp;&nbsp;The CPI of public
+            transportation has increased over the past five years.
           </div>
         </div>
-      </div>
-      <h3>Hypothesis Testing</h3>
-      <p>
-        Following this, hypothesis testing was done to test the hypothesis made for each of our
-        research questions. Before choosing a statistical test to use for both research questions,
-        we first performed the QQ-plot test to check for normality of our data set. For both
-        instances, it was found that our data does not follow a normal distribution. Thus, we use
-        different tests to perform hypothesis from those that we have learned.
-      </p>
-
-      <div class="card-container">
-        <div class="card-procedure">
-          <p>
-            <span class="add-emph">Primary Research Question:</span> What is the overall trend of
-            the CPI of public transportation over the past five years? <br />
-            <br />
-            <span class="add-emph">Null hypothesis:</span> The CPI of public transportation has not
-            increased over the past five years.
-            <br />
-            <span class="add-emph">Alternative hypothesis:</span> The CPI of public transportation
-            has increased over the past five years.
-          </p>
-          <p>
-            The Mann-Whitney U statistical test was then used to check if we will accept or reject
-            the null hypothesis. After performing the statistical test, we obtained a p-value of
-            7.714x10^(-6), which is less than our set significance level of 0.05. Thus, we
-            <span class="add-emph">reject the null hypothesis</span>.
-          </p>
-          <p>
-            Given this, it implies that
-            <span class="add-emph"
-              >the CPI of Passenger transportation has significantly increased over the past five
-              years</span
-            >.
-          </p>
-        </div>
-        <div class="card-procedure">
-          <p>
-            <span class="add-emph">Secondary Research Question:</span> Is there a relationship
-            between the CPI of fuel/gas and public transportation over the past five years? <br />
-            <br />
-            <span class="add-emph">Null hypothesis:</span> There is no relationship between the CPI
-            of fuel/gas and public transportation over the past five years.
-            <br />
-            <span class="add-emph">Alternative hypothesis:</span> There is a relationship between
-            the CPI of fuel/gas and public transportation over the past five years.
-          </p>
-          <p>
-            The Spearman Correlation test was then used to check if we will accept or reject the
-            null hypothesis. After performing the statistical test, we obtained the p-value of
-            3.626x10^(-12), which is less than our set significance level of 0.05. Thus, we
-            <span class="add-emph">reject the null hypothesis</span>. Additionally, the Spearman
-            Coefficient rho of 0.7336 tells us that there is a positive correlation between the CPI
-            of fuel and public transporation where both increase together over time.
-          </p>
-          <p>
-            Given this, it implies that
-            <span class="add-emph"
-              >there is an observed correlation between the CPI of fuel and public transportation
-              over the past 5 years from 2019 to 2023</span
-            >.
+        <div>
+          <p id="test-result">
+            The <span>Mann-Whitney U statistical test</span> was then used to
+            check if we will accept or reject the null hypothesis. After
+            performing the statistical test, we obtained a p-value of
+            7.714x10^(-6), which is less than our set significance level of
+            0.05. Thus, we <span>reject the null hypothesis</span>.
           </p>
         </div>
       </div>
-
-      <p>
-        You may look into our Python notebook to see our exploratory data analysis in much more
-        detail.
-      </p>
-      <div id="data-container">
-        <a
-          href="https://colab.research.google.com/drive/1LnbBjl69wKKgpV9iUBpogIUWlqBACwjk?usp=sharing"
-          target="_blank"
-        >
-          <button class="btn_one" id="EDA-btn">Check out our exploratory data analysis</button>
-        </a>
+      <div id="test-conclu">
+        Given this, it implies that
+        <span class="add-emph"
+          >the CPI of Passenger transportation has significantly increased over
+          the past five years</span
+        >.
+      </div>
+      <br /><br />
+      <div id="hypothesis-testing">
+        <div>
+          <p id="rq-ht">
+            Is there a relationship between the CPI of fuel/gas and public
+            transportation over the past five years?
+          </p>
+          <div id="hypothesis">
+            <span>Null hypothesis:</span>&nbsp;&nbsp;There is no relationship
+            between the CPI of fuel/gas and public transportation over the past
+            five years.
+          </div>
+          <div id="hypothesis">
+            <span>Alternative hypothesis:</span>&nbsp;&nbsp;There is a
+            relationship between the CPI of fuel/gas and public transportation
+            over the past five years.
+          </div>
+        </div>
+        <div>
+          <p id="test-result">
+            The <span>Spearman Correlation test</span> was then used to check if
+            we will accept or reject the null hypothesis. After performing the
+            statistical test, we obtained the p-value of 3.626x10^(-12), which
+            is less than our set significance level of 0.05. Thus, we
+            <span>reject the null hypothesis</span>. Additionally, the Spearman
+            Coefficient rho of 0.7336 tells us that there is a
+            <span>positive correlation</span> between the CPI of fuel and public
+            transporation where both increase together over time.
+          </p>
+        </div>
+      </div>
+      <div id="test-conclu">
+        Given this, it implies that
+        <span
+          >there is an observed correlation between the CPI of fuel and public
+          transportation over the past 5 years from 2019 to 2023</span
+        >.
+      </div>
+      <div class="flex-container" id="data-btns">
+        <div id="data-container">
+          <a
+            href="https://colab.research.google.com/drive/1LnbBjl69wKKgpV9iUBpogIUWlqBACwjk?usp=sharing"
+            target="_blank"
+          >
+            <button class="btn_one" id="EDA-btn">
+              Check out our exploratory data analysis
+            </button>
+          </a>
+        </div>
       </div>
     </div>
     <div id="methods">
@@ -454,9 +588,10 @@
           <h3 class="name">Diego Montenejo</h3>
           <!--PLace your details in the div under your name!-->
           <div>
-            I'm Diego Montenejo, a 3rd year BS Computer Science student with a knack for game
-            development and music production. Despite my inclination towards different creative
-            avenues, I still enjoy the analytical and computational side of computer science and
+            I'm Diego Montenejo, a 3rd year BS Computer Science student with a
+            knack for game development and music production. Despite my
+            inclination towards different creative avenues, I still enjoy the
+            analytical and computational side of computer science and
             information technology.
           </div>
         </div>
@@ -465,9 +600,10 @@
           <h3 class="name">Jasmin Pascual</h3>
           <!--PLace your details in the div under your name!-->
           <div>
-            I'm Jasmin Pascual, a 4th year BS Computer Science student who has a passion for graphic
-            design. Because of this, I would love to be a UI/UX designer in the future. In my free
-            time, you can find me watching volleyball, playing sudoku, or exercising at the gym.
+            I'm Jasmin Pascual, a 4th year BS Computer Science student who has a
+            passion for graphic design. Because of this, I would love to be a
+            UI/UX designer in the future. In my free time, you can find me
+            watching volleyball, playing sudoku, or exercising at the gym.
           </div>
         </div>
         <div class="card">
@@ -475,10 +611,12 @@
           <h3 class="name">Jeanne Toledo</h3>
           <!--PLace your details in the div under your name!-->
           <div>
-            I'm Jeanne Toledo, a graduating BS Computer Science student who finds joy in learning
-            new things. In Computer Science, I particularly enjoy web and software development since
-            it is where I can apply my learnings whilst adding my own creative twist. Other than
-            Computer Science, other things that I like are graphic design and Winnie the Pooh.
+            I'm Jeanne Toledo, a graduating BS Computer Science student who
+            finds joy in learning new things. In Computer Science, I
+            particularly enjoy web and software development since it is where I
+            can apply my learnings whilst adding my own creative twist. Other
+            than Computer Science, other things that I like are graphic design
+            and Winnie the Pooh.
           </div>
         </div>
       </div>

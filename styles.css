@@ -26,7 +26,7 @@ p {
   animation: rotate 0.56s infinite linear;
   width: 50px;
   height: 50px;
-  border: 12px solid rgb(255, 44, 90);
+  border: 12px solid #f27a62;
   border-bottom: 12px solid #fff;
   border-radius: 50%;
   margin: 0;
@@ -41,11 +41,11 @@ p {
 }
 header {
   width: 92vw;
-  padding: 6vh 4vw;
+  padding: 4vh 4vw;
   position: fixed;
   font-weight: bold;
-  background: transparent;
-  color: #fff;
+  background-color: white;
+  opacity: 0.8;
   transition: 0.4s ease-in-out;
   z-index: 2;
 }
@@ -62,7 +62,7 @@ header table {
 #magnify {
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.92);
+  background: white;
   position: fixed;
   z-index: 4;
   display: none;
@@ -74,11 +74,11 @@ header table {
   top: 0;
   right: 0;
   margin: 20px 40px;
-  color: #fff;
+  color: black;
   transition: 0.4s ease-in-out;
 }
 #magnify h1:hover {
-  color: rgb(255, 44, 90);
+  color: #f27a62;
   cursor: pointer;
 }
 #img_here {
@@ -90,10 +90,11 @@ header table {
 }
 #logo {
   font-size: 24px;
-  color: rgb(255, 44, 90);
+  color: #f27a62;
 }
 #navigation {
   text-align: right;
+  color: black;
 }
 #navigation a {
   color: inherit;
@@ -108,29 +109,53 @@ header table {
 }
 #top_part {
   width: 100%;
-  border: 2vh solid #fff;
+  /*border: 2vh solid #fff;*/
 }
 /*#top_part tr td {
   width: 50%;
 }*/
 
 #about {
-  width: 84% !important;
-  height: 95vh;
+  /*width: 84% !important;*/
+  width: 101% !important;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  padding: 0px 8%;
+  /*padding: 0px 8%;*/
 }
 
 #about h1 {
-  font-size: 40px;
+  font-size: 48px;
   word-wrap: break-word;
+  margin-bottom: 0;
+  padding-left: 8%;
 }
 
-#about div {
+#about h2 {
+  font-size: 28px;
+  font-weight: normal;
   word-wrap: break-word;
+  margin-top: 0;
+  padding-left: 8%;
+}
+#git-button {
+  padding-left: 8%;
+}
+#road {
+  background: url("images/road.png") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 23vh;
+  margin-top: 8%;
+}
+#commuters {
+  background: url("images/commuters.png") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 23vh;
+  margin-top: 8%;
 }
 #about table {
   width: 70%;
@@ -159,9 +184,9 @@ header table {
 .btn_one {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
-  color: rgb(255, 44, 90);
+  color: #f27a62;
   background: #fff;
-  border: 3px solid rgb(255, 44, 90);
+  border: 3px solid #f27a62;
   padding: 8px 40px;
   width: 35%;
   border-radius: 80px;
@@ -170,21 +195,146 @@ header table {
   transition: 0.4s ease-in-out;
 }
 .btn_one:hover {
-  box-shadow: 0px 10px 30px rgba(255, 44, 90, 0.8);
+  box-shadow: 0px 10px 30px rgb(242, 122, 98, 0.8);
   cursor: pointer;
   color: #fff;
-  background: rgb(255, 44, 90);
+  background: #f27a62;
 }
 #rightImage {
   width: 60%;
   height: 95vh;
-  background: linear-gradient(0deg, rgba(255, 44, 90, 0.8), rgba(255, 44, 90, 0.8)),
-    url("https://images.unsplash.com/photo-1506057527569-6a0285b2fcc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=60")
-      center center;
+  background: url("images/aboutImage.png") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-#data {
+
+#background-overview {
+  /*background: url("images/road-left3.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 0.3% 100%;*/
+  background: url("images/jeep.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: -17% 25px;
+}
+
+#bg-content {
+  padding: 0vh 4vw 0vh 30vw;
+  text-align: justify;
+  font-size: 14px;
+}
+#bg-content h2 {
+  text-align: center;
+}
+#bg-content p {
+  margin: 0;
+  padding: 1em 0px;
+}
+
+#ref {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  margin: 6vh 4vw 0vh;
+}
+
+#pso {
+  background: url("images/commuters.png") center center #f27a62;
+  background-size: 50%;
+  background-position: 88% 500%;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6vh 4vw 0vh;
+  margin: 0;
+}
+
+#problem-objectives {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  padding: 0px 2em;
+}
+#solution-container {
+  padding: 0px 2em;
+  margin-left: 2em;
+}
+
+#objectives-container {
+  padding-bottom: 6vh;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+#rq {
+  flex-direction: column;
+  text-align: center;
+}
+
+span {
+  color: #2192b6;
+}
+
+#overview #question {
+  font-weight: bold;
+  font-size: 42px;
+  margin: 0;
+}
+#background-data {
+  background: url("images/psa.png");
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: 106% 60px;
+}
+#data-collection {
+  flex-direction: column;
+  padding-top: 0;
+  width: 60%;
+}
+#data-collection h2 {
+  text-align: center;
+}
+
+#about-data {
+  flex-direction: column;
+}
+
+#about-data span {
+  font-weight: bold;
+}
+#steps {
+  background-color: #f27a62;
+  padding: 6vh 4vw;
+  color: white;
+}
+
+#step-title {
+  font-size: 42px;
+}
+
+#step-description {
+  font-weight: normal;
+}
+
+#columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#column {
+  padding: 1em;
+  width: 190px;
+  background-color: #fff599;
+  border-radius: 20px;
+}
+
+/*#data {
   width: 92vw;
   padding: 6vh 4vw;
   font-weight: bold;
@@ -192,19 +342,81 @@ header table {
 #data h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-}
+}*/
 #data-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: inherit;
+  margin: 0px 50px;
 }
 #data-collection-btn,
-#EDA-btn {
-  width: 90%;
+#EDA-btn,
+#dataset-btn {
+  width: 100%;
+}
+
+#data-btns {
+  justify-content: center;
+  padding: 0vh 4vw;
+}
+
+#eda {
+  flex-direction: column;
+}
+
+#data-visualization {
+  display: flex;
+  align-items: center;
+  background-color: #f27a62;
+  border-radius: 20px;
+  padding: 2em;
+  color: white;
+}
+
+#data-visualization h3 {
+  font-size: 42px;
+  width: 65%;
+  margin-right: 25px;
+  border-right: solid 4px;
+  width: 800px;
+}
+
+#visualization-plots {
+  margin: 6vh 4vw 0vh;
+  display: grid;
+  grid-auto-flow: column;
+  row-gap: 24px;
+  column-gap: 50px;
+  justify-items: center;
+  padding: 0px 50px;
+  align-items: center;
+}
+#visualization-plots img {
+  width: 650px;
+}
+
+#hypothesis-testing {
+  margin: 6vh 4vw 0vh;
+  display: grid;
+  grid-auto-flow: column;
+  row-gap: 24px;
+  column-gap: 50px;
+  justify-items: center;
+  padding: 0px 50px;
+  align-items: center;
+}
+
+#data #rq-ht {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
 }
 #photos {
-  width: 100%;
+  width: 120%;
   columns: 3;
   column-gap: 4%;
   z-index: 1;
@@ -221,31 +433,35 @@ header table {
   cursor: pointer;
 }
 #methods,
-#overview {
-  width: 92vw;
-  padding: 6vh 4vw;
+#overview,
+#data {
+  /*width: 92vw;*/
+  width: 100vw;
+  /*padding: 6vh 0vw;*/
   font-weight: bold;
 }
 #methods h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
 }
-#overview h1 {
+#overview h1,
+#data h1 {
+  margin: 6vh 4vw;
   padding: 5px 0px;
-  border-bottom: 4px solid rgb(255, 44, 90);
+  color: #f27a62;
+  border-bottom: 4px solid #f27a62;
 }
 
 #overview h2,
 #data h2,
 #data h3 {
   padding: 5px 0px;
-  text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 #overview p,
 #data p {
-  padding: 5px 0px;
-  text-align: center;
   font-weight: normal;
 }
 
@@ -254,21 +470,54 @@ header table {
   font-weight: normal;
 }
 
-#overview #hypothesis h3,
-p {
-  margin: 16px;
+#overview #hypothesis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5em 2em;
+  padding: 0px 2em;
+  background-color: #fff599;
+  border-radius: 20px;
+  justify-content: space-between;
 }
 
-#overview #hypothesis {
-  padding: 5px 0px;
+#data #hypothesis {
+  margin: 0.5em 0em;
+  padding: 1em 2em;
+  background-color: #fff599;
+  border-radius: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+#data #hypothesis span {
+  font-weight: bold;
+  color: black;
+}
+
+#data #test-result {
+  font-size: 18px;
+  text-align: justify;
+}
+
+#test-result span {
+  font-weight: bold;
+  color: #f27a62;
+}
+
+#test-conclu {
+  font-size: 24px;
+  margin: 6vh 15vw 0vh;
   text-align: center;
-  width: 80%;
+}
+
+#overview #hypothesis p {
+  text-align: right;
 }
 #overview #hypotheses {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 5px 0px;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
 }
 #team {
@@ -282,8 +531,8 @@ p {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-auto-flow: row;
+  grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+  grid-auto-flow: column;
   row-gap: 24px;
   column-gap: 24px;
   justify-items: center;
@@ -304,10 +553,7 @@ h3.name:hover {
 .procedure-header {
   margin: 0;
   margin-bottom: 18px;
-}
-
-.procedure-header:hover {
-  border-bottom: 2px solid rgb(255, 44, 90);
+  text-align: center;
 }
 
 .procedure {
@@ -322,6 +568,21 @@ h3.name:hover {
   font-weight: normal;
 }
 
+#data #rq-plot {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-weight: bold;
+  color: #2192b6;
+  padding-bottom: 1em;
+  border-bottom: 4px solid;
+  border-color: #2192b6;
+  font-size: 24px;
+}
+
+#data #plot-description {
+  text-align: justify;
+}
 .plots {
   width: 100%;
 }
@@ -329,10 +590,6 @@ h3.name:hover {
 .plots:hover {
   transform: scale(1.1);
   cursor: pointer;
-}
-
-.add-emph {
-  font-weight: 600;
 }
 
 #team table {
