@@ -101,7 +101,7 @@ header table {
   text-decoration: none;
   padding: 5px 10px;
   border-bottom: 2px solid transparent;
-  margin-left: 4vw;
+  margin-left: 2vw;
   transition: 0.4s ease-in-out;
 }
 #navigation a:hover {
@@ -318,6 +318,7 @@ span {
 
 #step-description {
   font-weight: normal;
+  text-align: justify;
 }
 
 #columns {
@@ -359,6 +360,7 @@ span {
 #data-btns {
   justify-content: center;
   padding: 0vh 4vw;
+  margin-top: 0;
 }
 
 #eda {
@@ -407,7 +409,7 @@ span {
   align-items: center;
 }
 
-#data #rq-ht {
+#data-methods #rq-ht {
   display: flex;
   align-items: center;
   text-align: left;
@@ -432,9 +434,12 @@ span {
   transform: scale(1.1);
   cursor: pointer;
 }
-#methods,
+
 #overview,
-#data {
+#data-methods,
+#modelling,
+#conclusion,
+#team {
   /*width: 92vw;*/
   width: 100vw;
   /*padding: 6vh 0vw;*/
@@ -445,7 +450,10 @@ span {
   border-bottom: 4px solid rgb(255, 44, 90);
 }
 #overview h1,
-#data h1 {
+#data-methods h1,
+#modelling h1,
+#conclusion h1,
+#team h1 {
   margin: 6vh 4vw;
   padding: 5px 0px;
   color: #f27a62;
@@ -453,20 +461,22 @@ span {
 }
 
 #overview h2,
-#data h2,
-#data h3 {
+#data-methods h2,
+#data-methods h3,
+#modelling h3 {
   padding: 5px 0px;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
 
 #overview p,
-#data p {
+#data-methods p {
   font-weight: normal;
+  text-align: justify;
 }
 
 #overview ul,
-#data ol {
+#data-methods ol {
   font-weight: normal;
 }
 
@@ -481,7 +491,7 @@ span {
   justify-content: space-between;
 }
 
-#data #hypothesis {
+#data-methods #hypothesis {
   margin: 0.5em 0em;
   padding: 1em 2em;
   background-color: #fff599;
@@ -489,12 +499,12 @@ span {
   font-weight: normal;
   text-align: left;
 }
-#data #hypothesis span {
+#data-methods #hypothesis span {
   font-weight: bold;
   color: black;
 }
 
-#data #test-result {
+#data-methods #test-result {
   font-size: 18px;
   text-align: justify;
 }
@@ -506,7 +516,7 @@ span {
 
 #test-conclu {
   font-size: 24px;
-  margin: 6vh 15vw 0vh;
+  margin: 6vh 15vw;
   text-align: center;
 }
 
@@ -520,14 +530,6 @@ span {
   text-align: left;
   font-weight: normal;
 }
-#team {
-  width: 92vw;
-  padding: 6vh 4vw;
-}
-#team h1 {
-  padding: 5px 0px;
-  border-bottom: 4px solid rgb(255, 44, 90);
-}
 
 .card-container {
   display: grid;
@@ -536,20 +538,58 @@ span {
   row-gap: 24px;
   column-gap: 24px;
   justify-items: center;
+  margin: 6vh 4vw 0vh;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 16px;
+  text-align: justify;
+  padding: 30px;
+  border-radius: 20px;
+  background: #fff599;
+  font-weight: normal;
+}
+#member1 {
+  margin: 0;
+  background: url("images/diego.png");
+  background-size: 30vh;
+  background-repeat: no-repeat;
+  text-align: left;
+  background-position: 100%;
+  width: 90%;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+#member2 {
+  margin: 0;
+  background: url("images/jas.png");
+  background-size: 35vh;
+  background-repeat: no-repeat;
+  text-align: left;
+  background-position: 110%;
+  width: 90%;
+  margin-bottom: 1em;
+  padding: 0 1em;
 }
 
-h3.name:hover {
-  border-bottom: 2px solid rgb(255, 44, 90);
+#member3 {
+  margin: 0;
+  background: url("images/jeanne.png");
+  background-size: 35vh;
+  background-repeat: no-repeat;
+  text-align: left;
+  background-position: 90% 25%;
+  width: 90%;
+  margin-bottom: 1em;
+  padding: 0 1em;
 }
 
+#name {
+  font-size: 24px;
+  width: 100px;
+}
 .procedure-header {
   margin: 0;
   margin-bottom: 18px;
@@ -568,7 +608,7 @@ h3.name:hover {
   font-weight: normal;
 }
 
-#data #rq-plot {
+#data-methods #rq-plot {
   display: flex;
   align-items: center;
   text-align: left;
@@ -580,7 +620,7 @@ h3.name:hover {
   font-size: 24px;
 }
 
-#data #plot-description {
+#data-methods #plot-description {
   text-align: justify;
 }
 .plots {
@@ -592,6 +632,123 @@ h3.name:hover {
   cursor: pointer;
 }
 
+#goals {
+  font-weight: normal;
+  flex-direction: column;
+}
+
+#goal {
+  display: flex;
+  align-items: center;
+  background-color: #fff599;
+  border-radius: 20px;
+  padding: 2em;
+}
+
+#goal h3 {
+  font-size: 32px;
+  margin: 0;
+  border-right: solid 4px;
+  width: 400px;
+}
+ol {
+  margin: 0;
+}
+
+#svr {
+  padding: 6vh 4vw;
+  text-align: center;
+}
+
+#svr p {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+#features {
+  display: flex;
+  font-weight: normal;
+  flex-direction: column;
+  margin-right: 3em;
+  width: 70%;
+}
+#features p {
+  font-weight: bold;
+  font-size: 32px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+#ml-output {
+  text-align: justify;
+  flex-direction: row;
+  background-color: #f27a62;
+  margin: 0;
+  padding: 8vh 4vw;
+  color: white;
+}
+
+#ml-explanation {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  width: 1700px;
+}
+#rq-ml {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-right: 3em;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#modelling #rq-plot {
+  text-align: justify;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#insights {
+  flex-direction: column;
+  font-weight: normal;
+  text-align: center;
+}
+
+#insight {
+  margin: 4vh 4vw 0vh;
+  padding: 1em 2em;
+  background-color: #fff599;
+  border-radius: 20px;
+}
+
+#insight span {
+  color: black;
+}
+
+#implications {
+  text-align: justify;
+  flex-direction: column;
+  background-color: #f27a62;
+  color: white;
+  margin: 0;
+  padding: 4vh 4vw;
+}
+
+#future {
+  text-align: justify;
+  flex-direction: column;
+}
+
+.center {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+.card img {
+  width: 50%;
+}
 #team table {
   width: 100%;
 }
