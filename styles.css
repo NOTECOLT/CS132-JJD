@@ -249,6 +249,7 @@ header table {
   color: white;
   padding: 6vh 4vw 0vh;
   margin: 0;
+  text-align: justify;
 }
 
 #problem-objectives {
@@ -294,6 +295,7 @@ span {
   flex-direction: column;
   padding-top: 0;
   width: 60%;
+  text-align: justify;
 }
 #data-collection h2 {
   text-align: center;
@@ -301,6 +303,7 @@ span {
 
 #about-data {
   flex-direction: column;
+  text-align: justify;
 }
 
 #about-data span {
@@ -365,6 +368,7 @@ span {
 
 #eda {
   flex-direction: column;
+  text-align: justify;
 }
 
 #data-visualization {
@@ -472,7 +476,6 @@ span {
 #overview p,
 #data-methods p {
   font-weight: normal;
-  text-align: justify;
 }
 
 #overview ul,
